@@ -1,0 +1,32 @@
+{
+	"shell": true,
+	"cmd": ["touch build.log && check.sh '$file_path' "],
+
+	"variants":[
+	 {
+	 	"shell":true,
+	 	"cmd":["make PROJECTNAME+=$project_base_name MCU+=atmega324a PROGRAMMER_MCU+=m324pa AVRDUDE_PORT+=usb AVRDUDE_PROGRAMMERID+=avrisp2 hex >> build.log"],
+	 	"name": "AVR HEX"
+	 },
+	 {
+	 	"shell":true,
+	 	"cmd":["make PROJECTNAME+=$project_base_name MCU+=atmega324a PROGRAMMER_MCU+=m324pa AVRDUDE_PORT+=usb AVRDUDE_PROGRAMMERID+=avrisp2 clean >> build.log"],
+	 	"name":"AVR CLEAN"
+	 },
+	 {
+	 	"shell":true,
+	 	"cmd":["make PROJECTNAME+=$project_base_name MCU+=atmega324a PROGRAMMER_MCU+=m324pa AVRDUDE_PORT+=usb AVRDUDE_PROGRAMMERID+=avrisp2 install >> build.log"],
+	 	"name":"AVR INSTALL"
+	 },
+	 {
+	 	"shell":true,
+	 	"cmd":["make PROJECTNAME+=$project_base_name MCU+=atmega324a PROGRAMMER_MCU+=m324pa AVRDUDE_PORT+=usb AVRDUDE_PROGRAMMERID+=avrisp2 disasm >> build.log"],
+	 	"name":"AVR DISASM"
+	 },
+	 {
+	 	"shell":true,
+	 	"cmd":["make PROJECTNAME+=$project_base_name MCU+=atmega324a PROGRAMMER_MCU+=m324pa AVRDUDE_PORT+=usb AVRDUDE_PROGRAMMERID+=avrisp2 writeflash >> build.log"],
+	 	"name":"AVR WRITE-FLASH"
+	 }
+	 ]
+}
