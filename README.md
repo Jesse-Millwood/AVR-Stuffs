@@ -9,7 +9,7 @@ I modified this makefile that I got from http://electrons.psychogenic.com and ed
 The usage is shown in the sublime build system file like:
 `make PROJECTNAME+=$project_base_name MCU+=atmega324a PROGRAMMER_MCU+=m324pa AVRDUDE_PORT+=usb AVRDUDE_PROGRAMMERID+=avrisp2 hex >> build.log`
 
-Make sure that the make file name `makefile` when it is copied to your project directory. I have a folder of make files on my $PATH and so I have them named different things then I rename them when I copy them.
+Make sure that the make file is named `makefile` when it is copied to your project directory. I have a folder of make files on my $PATH and so I have them named different things then I rename them when I copy them.
 
 Check.sh
 ---------
